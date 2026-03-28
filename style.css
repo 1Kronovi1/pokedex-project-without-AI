@@ -1,0 +1,270 @@
+@import url('https://fonts.googleapis.com/css2?family=Boldonse&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    --back-color: #CA215A;
+    --back-sec-color: #FE1A55;
+    --img-color: #17C0EB;
+    --buttons-color: #0C1A57;
+    --text-color: #F2F3E7;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    color: var(--text-color);
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: #851842;
+}
+
+#favorite {
+    
+}
+
+.top-container {
+    text-align: start;
+    width: 60%;
+}
+
+#container {
+    background-color: var(--back-color);
+    display: flex;
+    flex-direction: row;
+    align-items: start;
+    border-radius: 15px;
+    padding: 25px;
+    gap: 5%;
+}
+
+.title {
+    font-family: "Boldonse", system-ui;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.sub-title {
+    font-family: "Roboto", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+#pokedex {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 30px;
+    border-left: 2px solid var(--back-sec-color);
+    padding-left: 45px;
+}
+
+.input-container {
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+}
+
+#name-input {
+    border: none;
+    outline: none;
+    background-color: var(--buttons-color);
+    padding: 10px;
+    padding-left: 25px;
+    font-size: 1rem;
+    font-family: "Boldonse";
+    width: 60%;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px; 
+}
+
+#search {
+    border: none;
+    outline: none;
+    background-color: var(--buttons-color);
+    padding: 10px;
+    font-size: 1rem;
+    font-family: "Boldonse";
+    width: 30%;
+    border-radius: 5px;
+    text-align: center;
+    cursor: pointer;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+
+.sprite-container {
+    position: relative;
+    background-color: var(--text-color);
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+
+#sprite {
+    width: 200px;   
+}
+
+#favorite-btn {
+    position: absolute;
+    bottom: 170px;
+    right: 5px;
+    background-color: transparent;
+    border: none;
+}
+
+#fav-img {
+    width: 25px;
+}
+
+.name-display-container {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+
+    .sub-title {
+        font-size: 1rem;
+        font-family: "Boldonse";
+    }
+}
+
+.buttons-container {
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+
+    .chose-btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: none;
+        outline: none;
+        background-color: var(--buttons-color);
+        padding: 10px;
+        height: 40px;
+        text-align: center;
+        font-size: 0.8rem;
+        font-family: "Boldonse";
+        border-radius: 5px;
+        text-align: center;
+        cursor: pointer;
+        box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    }
+}
+
+.mid-container {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+}
+
+#pokemon-name::first-letter {
+    text-transform: uppercase;
+}
+
+#favorites-container {
+    overflow-y: scroll;
+    display: grid;
+    height: 400px;
+    grid-template-columns: 1fr 1fr;
+
+    img {
+        width: 140px;
+    }
+}
+
+#favorites-container::-webkit-scrollbar {
+    width: 6px;
+}
+
+#favorites-container::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+#favorites-container::-webkit-scrollbar-thumb {
+    background-color: var(--back-sec-color);
+    border-radius: 10px;
+}
+
+#favorites-container::-webkit-scrollbar-thumb:hover {
+    background-color: #ff2c64;
+}
+
+@media (max-width: 768px) {
+    body {
+        height: auto;
+        min-height: 100vh;
+        padding: 20px 0;
+    }
+
+    #container {
+        flex-direction: column-reverse; /* pokedex em cima, favoritos embaixo */
+        align-items: center;
+        width: 95%;
+        gap: 30px;
+        padding: 20px;
+    }
+
+    #pokedex {
+        border-left: none;
+        border-top: 2px solid var(--back-sec-color);
+        padding-left: 0;
+        padding-top: 25px;
+        align-items: center;
+        width: 100%;
+    }
+
+    .top-container {
+        width: 100%;
+        text-align: center;
+    }
+
+    .input-container {
+        width: 100%;
+        justify-content: center;
+    }
+
+    #name-input {
+        width: 65%;
+    }
+
+    #search {
+        width: 30%;
+    }
+
+    .mid-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .buttons-container {
+        justify-content: center;
+        width: 100%;
+
+        .chose-btn {
+            width: 45%;
+            height: 45px;
+            font-size: 0.9rem;
+        }
+    }
+
+    #favorite {
+        width: 100%;
+        text-align: center;
+    }
+
+    #favorites-container {
+        height: 250px;
+        grid-template-columns: 1fr 1fr 1fr; /* 3 colunas no mobile */
+        width: 100%;
+
+        img {
+            width: 100%;
+        }
+    }
+}

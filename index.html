@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokedex</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="container">
+        <div id="favorite">
+            <h1 class="title">FAVORITOS</h1>
+            <div id="favorites-container">
+                
+            </div>
+        </div>
+        <div id="pokedex">
+            <div class="top-container">
+                <h1 class="title">POKEDEX</h1>
+                <p class="sub-title">Desbrave os muitos pokemons existentes, e favorite os mais bonitos :)</p>
+            </div>
+            <div class="input-container">
+                <input id="name-input" type="text" placeholder="Pikachu">
+                <button id="search">Search</button>
+            </div>
+            <div class="mid-container">
+                <div class="sprite-container">
+                    <img id="sprite" src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/25.png" alt="">
+                    <button id="favorite-btn"><img id="fav-img" src="assets/starblank.png" alt="favorite"></button>
+                </div>
+                <div class="buttons-container">
+                    <button class="chose-btn" id="back">Back</button>
+                    <button class="chose-btn" id="foward">Next</button>
+                </div>
+            </div>
+            <div class="name-display-container">
+                <p class="sub-title" id="pokemon-id">25</p>
+                <p class="sub-title">-</p>
+                <p class="sub-title" id="pokemon-name">Pikachu</p>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
